@@ -1,0 +1,56 @@
+{
+  "deploy_settings": {
+    "default": {
+      "skill_id": "",
+      "was_cloned": false,
+      "merge": {
+        "skillManifest": {
+          "apis": {
+            "custom": {
+              "endpoint": {
+                "uri": "ask-custom-StatesQuiz"
+              }
+            }
+          }
+        }
+      }
+    },
+    "alexa_user": {
+      "skill_id": "amzn1.ask.skill.eaafd45d-4585-4d45-9cd2-8d6477ac5b02",
+      "was_cloned": false,
+      "merge": {
+        "manifest": {
+          "apis": {
+            "custom": {
+              "endpoint": {
+                "uri": "ask-custom-quiz-game-alexa_user"
+              }
+            }
+          }
+        }
+      },
+      "resources": {
+        "manifest": {
+          "eTag": "581e2294bee319775cd1020152cccfb8"
+        },
+        "interactionModel": {
+          "en-US": {
+            "eTag": "044e94772c352d25589bf8da2c065e42"
+          }
+        },
+        "lambda": [
+          {
+            "arn": "arn:aws:lambda:us-east-1:823128013708:function:ask-custom-quiz-game-alexa_user",
+            "functionName": "ask-custom-quiz-game-alexa_user",
+            "awsRegion": "us-east-1",
+            "alexaUsage": [
+              "custom/default"
+            ],
+            "revisionId": "1588081c-0aeb-437c-bea4-7eb4f22e38c2"
+          }
+        ]
+      },
+      "in_skill_products": []
+    }
+  }
+}
