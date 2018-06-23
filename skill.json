@@ -3,19 +3,25 @@
     "publishingInformation": {
       "locales": {
         "en-US": {
-          "summary": "Sample Short Description",
+          "summary": "Test your knowledge of the US states and their capitals.",
           "examplePhrases": [
-            "Alexa open hello world",
-            "Alexa tell hello world hello",
-            "Alexa ask hello world say hello"
+            "Alexa, open States Quiz",
+            "Alexa, play States Quiz"
           ],
-          "name": "study_buddy",
-          "description": "Sample Full Description"
+          "keywords": [
+            "quiz",
+            "games",
+            "geography"
+          ],
+          "name": "quiz-game",
+          "description": "Test your knowledge of the US states and their capitals.\n\nStates Quiz provides a fun way to keep your U.S. geography skills sharp.\n\nTo start, just say \"Alexa, launch States Quiz\" or \"Alexa, open States Quiz\" to start the game\".\n\nAt anytime, you can stop the game by saying \"Alexa, stop\"",
+          "smallIconUri": "https://s3-eu-west-1.amazonaws.com/alexa.maxi80.com/assets/alexa-logo-108.png",
+          "largeIconUri": "https://s3-eu-west-1.amazonaws.com/alexa.maxi80.com/assets/alexa-logo-512.png"
         }
       },
       "isAvailableWorldwide": true,
-      "testingInstructions": "Sample Testing Instructions.",
-      "category": "EDUCATION_AND_REFERENCE",
+      "testingInstructions": "Include your testing instruction (if any) here",
+      "category": "KNOWLEDGE_AND_TRIVIA",
       "distributionCountries": []
     },
     "apis": {
@@ -25,6 +31,18 @@
         }
       }
     },
+<<<<<<< HEAD
+    "manifestVersion": "1.0",
+    "permissions": [],
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
+=======
     "manifestVersion": "1.0"
+>>>>>>> 71b0a444986869349bb63bc3c4364b11245566f6
   }
 }
