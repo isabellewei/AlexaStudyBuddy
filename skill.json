@@ -31,6 +31,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "manifestVersion": "1.0",
     "permissions": [],
     "privacyAndCompliance": {
@@ -40,5 +41,8 @@
       "isChildDirected": false,
       "usesPersonalInfo": false
     }
+=======
+    "manifestVersion": "1.0"
+>>>>>>> 71b0a444986869349bb63bc3c4364b11245566f6
   }
 }

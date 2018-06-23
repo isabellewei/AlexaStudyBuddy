@@ -21,6 +21,7 @@ const LaunchRequestHandler = {
   },
 };
 
+<<<<<<< HEAD
 const QuizHandler = {
   canHandle(handlerInput) {
     const request = handlerInput.requestEnvelope.request;
@@ -224,10 +225,40 @@ const RepeatHandler = {
     return handlerInput.responseBuilder
       .speak(question)
       .reprompt(question)
+=======
+const HelloWorldIntentHandler = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+      && handlerInput.requestEnvelope.request.intent.name === 'HelloWorldIntent';
+  },
+  handle(handlerInput) {
+    const speechText = 'Hello World!';
+
+    return handlerInput.responseBuilder
+      .speak(speechText)
+      .withSimpleCard('Hello World', speechText)
       .getResponse();
   },
 };
 
+const HelpIntentHandler = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+      && handlerInput.requestEnvelope.request.intent.name === 'AMAZON.HelpIntent';
+  },
+  handle(handlerInput) {
+    const speechText = 'You can say hello to me!';
+
+    return handlerInput.responseBuilder
+      .speak(speechText)
+      .reprompt(speechText)
+      .withSimpleCard('Hello World', speechText)
+>>>>>>> 71b0a444986869349bb63bc3c4364b11245566f6
+      .getResponse();
+  },
+};
+
+<<<<<<< HEAD
 const HelpHandler = {
   canHandle(handlerInput) {
     console.log("Inside HelpHandler");
@@ -259,23 +290,46 @@ const ExitHandler = {
   handle(handlerInput) {
     return handlerInput.responseBuilder
       .speak(exitSkillMessage)
+=======
+const CancelAndStopIntentHandler = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+      && (handlerInput.requestEnvelope.request.intent.name === 'AMAZON.CancelIntent'
+        || handlerInput.requestEnvelope.request.intent.name === 'AMAZON.StopIntent');
+  },
+  handle(handlerInput) {
+    const speechText = 'Goodbye!';
+
+    return handlerInput.responseBuilder
+      .speak(speechText)
+      .withSimpleCard('Hello World', speechText)
+>>>>>>> 71b0a444986869349bb63bc3c4364b11245566f6
       .getResponse();
   },
 };
 
 const SessionEndedRequestHandler = {
   canHandle(handlerInput) {
+<<<<<<< HEAD
     console.log("Inside SessionEndedRequestHandler");
     return handlerInput.requestEnvelope.request.type === 'SessionEndedRequest';
   },
   handle(handlerInput) {
     console.log(`Session ended with reason: ${JSON.stringify(handlerInput.requestEnvelope)}`);
+=======
+    return handlerInput.requestEnvelope.request.type === 'SessionEndedRequest';
+  },
+  handle(handlerInput) {
+    console.log(`Session ended with reason: ${handlerInput.requestEnvelope.request.reason}`);
+
+>>>>>>> 71b0a444986869349bb63bc3c4364b11245566f6
     return handlerInput.responseBuilder.getResponse();
   },
 };
 
 const ErrorHandler = {
   canHandle() {
+<<<<<<< HEAD
     console.log("Inside ErrorHandler");
     return true;
   },
@@ -287,10 +341,21 @@ const ErrorHandler = {
     return handlerInput.responseBuilder
       .speak(helpMessage)
       .reprompt(helpMessage)
+=======
+    return true;
+  },
+  handle(handlerInput, error) {
+    console.log(`Error handled: ${error.message}`);
+
+    return handlerInput.responseBuilder
+      .speak('Sorry, I can\'t understand the command. Please say again.')
+      .reprompt('Sorry, I can\'t understand the command. Please say again.')
+>>>>>>> 71b0a444986869349bb63bc3c4364b11245566f6
       .getResponse();
   },
 };
 
+<<<<<<< HEAD
 /* CONSTANTS */
 const skillBuilder = Alexa.SkillBuilders.custom();
 const imagePath = "https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/quiz-game/state_flag/{0}x{1}/{2}._TTH_.png";
@@ -581,6 +646,16 @@ exports.handler = skillBuilder
     RepeatHandler,
     HelpHandler,
     ExitHandler,
+=======
+const skillBuilder = Alexa.SkillBuilders.custom();
+
+exports.handler = skillBuilder
+  .addRequestHandlers(
+    LaunchRequestHandler,
+    HelloWorldIntentHandler,
+    HelpIntentHandler,
+    CancelAndStopIntentHandler,
+>>>>>>> 71b0a444986869349bb63bc3c4364b11245566f6
     SessionEndedRequestHandler
   )
   .addErrorHandlers(ErrorHandler)

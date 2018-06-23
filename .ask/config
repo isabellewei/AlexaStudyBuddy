@@ -23,7 +23,11 @@
           "apis": {
             "custom": {
               "endpoint": {
+<<<<<<< HEAD
                 "uri": "ask-custom-quiz-game-alexa_user"
+=======
+                "uri": "ask-custom-study_buddy-alexa_user"
+>>>>>>> 71b0a444986869349bb63bc3c4364b11245566f6
               }
             }
           }
@@ -31,22 +35,39 @@
       },
       "resources": {
         "manifest": {
+<<<<<<< HEAD
           "eTag": "581e2294bee319775cd1020152cccfb8"
         },
         "interactionModel": {
           "en-US": {
             "eTag": "044e94772c352d25589bf8da2c065e42"
+=======
+          "eTag": "8581e55c9c08fdfa17bd92caf1fb00b9"
+        },
+        "interactionModel": {
+          "en-US": {
+            "eTag": "edceaa72ac13757059cb768ccbdf3b67"
+>>>>>>> 71b0a444986869349bb63bc3c4364b11245566f6
           }
         },
         "lambda": [
           {
+<<<<<<< HEAD
             "arn": "arn:aws:lambda:us-east-1:823128013708:function:ask-custom-quiz-game-alexa_user",
             "functionName": "ask-custom-quiz-game-alexa_user",
+=======
+            "arn": "arn:aws:lambda:us-east-1:823128013708:function:ask-custom-study_buddy-alexa_user",
+            "functionName": "ask-custom-study_buddy-alexa_user",
+>>>>>>> 71b0a444986869349bb63bc3c4364b11245566f6
             "awsRegion": "us-east-1",
             "alexaUsage": [
               "custom/default"
             ],
+<<<<<<< HEAD
             "revisionId": "1588081c-0aeb-437c-bea4-7eb4f22e38c2"
+=======
+            "revisionId": "7b41bb1c-a46c-45a7-bd0e-6db01664c8a7"
+>>>>>>> 71b0a444986869349bb63bc3c4364b11245566f6
           }
         ]
       },
